@@ -1,0 +1,28 @@
+    <div class="row">
+    <div class="col-md-3 profile-column">
+      <a href="" class="thumbnail">
+          <img class="profile-image" [src]="user.avatar_url" alt=""></a>
+          <p> <strong>{{user.login}}</strong>  </p>
+    </div>
+    <div class="col-lg-9 mini-nav">
+      <ul class="nav nav-tabs panel-default">
+        <li class="nav-item">
+          <a class="nav-link " href="#tab1default"  data-toggle="tab">Repositories&nbsp;<span class="badge badge-primary">{{user_repos.length}}</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "   href="#tab2default" data-toggle="tab">Followers &nbsp;<span class="badge badge-primary">{{user_followers.length}}</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "   href="#tab3default"  data-toggle="tab">Subscriptions&nbsp;<span class="badge badge-primary">{{user_following.length}}</span></a>
+        </li>
+      </ul>
+      <div class="panel-body" style="padding-top: 3em;">
+                         <div class="tab-content">
+                             <div class="tab-pane fade in " id="tab1default"><app-profile-mini-nav *ngFor="let item of user_repos"  [repo] = "item"></app-profile-mini-nav></div>
+                             <div class="tab-pane fade in" id="tab2default"><app-profile-followers *ngFor="let item of user_followers"  [follower] = "item"></app-profile-followers></div>
+                             <div class="tab-pane fade in" id="tab3default"><app-profile-following *ngFor="let item of user_following"  [following] = "item"></app-profile-following></div>
+                         </div>
+                     </div>
+
+    </div>
+</div>

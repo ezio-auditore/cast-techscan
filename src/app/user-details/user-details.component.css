@@ -1,0 +1,14 @@
+.profile-image{
+  width :50%;
+  height :auto;
+}
+.profile-column{
+padding-top: 2.1em;
+}
+.nav-tabs > li > a, .nav-pills > li > a {
+margin-left: 1em;
+margin-right: 1em;
+}
+.mini-nav{
+    padding-top: 7em
+}

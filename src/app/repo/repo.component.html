@@ -1,0 +1,14 @@
+
+<div class="card mt-4">
+
+  <div class="card-block" >
+        <a (click)="onSelect(repo.owner.login)">
+      <h4 class="card-title">{{repo.full_name}}</h4>
+        </a>
+      <p class="card-text">{{repo.description}}</p>
+
+
+     <span class="text-warning"> &#9733; </span>{{repo.stargazers_count}}
+    <cite>Last Updated &nbsp;&nbsp;<span>{{repo.updated_at | date}}</span></cite>
+  </div>
+</div>

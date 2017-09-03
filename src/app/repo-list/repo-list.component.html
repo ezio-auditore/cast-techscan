@@ -1,0 +1,23 @@
+<div class="row">
+<div class="col-md-4 repo-results">
+   {{totalCount}} repository results
+</div>
+</div>
+
+ <div class="row">
+
+   <div class="col-lg-9">
+
+<app-repo *ngFor="let repo of repoList | paginate: { itemsPerPage: 9, currentPage: p }" [repo]="repo" ></app-repo>
+
+   </div>
+
+ </div>
+ <pagination-controls (pageChange)="p = $event"maxSize="9"
+                      directionLinks="true"
+                      autoHide="true"
+                      previousLabel="Previous"
+                      nextLabel="Next"
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page"></pagination-controls>
